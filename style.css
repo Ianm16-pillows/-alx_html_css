@@ -39,6 +39,47 @@
       </blockquote>
     </section>
   </main>
+/* ===== Quotes Section Styling ===== */
+.quotes {
+  position: relative;
+  background: url("../images/quote-bg.jpg") no-repeat center center/cover;
+  padding: 100px 20px;           /* adjust vertical spacing to Figma spec */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;                /* white text on overlay */
+}
+
+.quotes::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);  /* dark overlay for readability */
+  z-index: 1;
+}
+
+.quotes blockquote {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;             /* restrict width for readability */
+  margin: 0 auto;
+  font-size: 1.5rem;             /* adjust to Figma value */
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.quotes blockquote p {
+  margin-bottom: 20px;
+}
+
+.quotes cite {
+  display: block;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--secondary-color); /* use your CSS variable if defined */
+}
 
   <footer>
     <p>&copy; 2025 Klaus — CSS Advanced Project</p>
