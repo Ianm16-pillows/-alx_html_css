@@ -1,88 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSS Advanced Project</title>
-  <link rel="stylesheet" href="styles/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Advanced - ALX Project</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
-  <header class="main-header">
-    <nav class="navbar">
-      <img src="images/logo.png" alt="Site Logo" class="logo">
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <img src="images/logo.png" alt="Brand Logo" class="logo">
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <!-- Banner / Hero Section -->
-    <section class="banner">
-      <div class="banner-content">
-        <h1>Building the Future, One Pixel at a Time</h1>
-        <p>Precision. Design. Vision. This page is a reflection of structured creativity — crafted from pure HTML & CSS.</p>
-        <button class="cta-btn">Explore More</button>
-      </div>
-    </section>
+  <!-- BANNER -->
+  <section class="banner">
+    <div class="overlay">
+      <h1>Welcome to CSS Advanced</h1>
+      <p>Master the art of styling and bring your web ideas to life.</p>
+    </div>
+  </section>
 
-    <!-- Quotes Section -->
-    <section class="quotes">
-      <blockquote>
-        <p>"Design is intelligence made visible."</p>
-        <cite>- Alina Wheeler</cite>
-      </blockquote>
-    </section>
-  </main>
-/* ===== Quotes Section Styling ===== */
-.quotes {
-  position: relative;
-  background: url("../images/quote-bg.jpg") no-repeat center center/cover;
-  padding: 100px 20px;           /* adjust vertical spacing to Figma spec */
+  <!-- QUOTES -->
+  <section class="quotes">
+    <blockquote>
+      <p>"Design is not just what it looks like and feels like. Design is how it works."</p>
+      <cite>– Steve Jobs</cite>
+    </blockquote>
+  </section>
+
+  <!-- VIDEOS -->
+  <section class="videos">
+    <h2>Watch & Learn</h2>
+    <div class="video-list">
+      <div class="video">
+        <img src="images/video-thumbnail1.jpg" alt="Video 1">
+        <h3>Understanding CSS Grid</h3>
+      </div>
+      <div class="video">
+        <img src="images/video-thumbnail1.jpg" alt="Video 2">
+        <h3>Responsive Design Basics</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERSHIP -->
+  <section class="membership">
+    <h2>Join the Community</h2>
+    <p>Access resources, mentorship, and support to level up your CSS game.</p>
+    <button>Become a Member</button>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.site-header {
+  background: #fff;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.site-header .logo {
+  height: 50px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  color: #0073e6;
+}
+
+/* Banner */
+.banner {
+  background: url("../images/banner.jpg") center/cover no-repeat;
+  height: 80vh;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+
+.banner .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
   text-align: center;
-  color: #ffffff;                /* white text on overlay */
+  border-radius: 10px;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Quotes */
+.quotes {
+  position: relative;
+  background: url("../images/quote-bg.jpg") no-repeat center/cover;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
 }
 
 .quotes::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);  /* dark overlay for readability */
-  z-index: 1;
+  background: rgba(0,0,0,0.5);
 }
 
 .quotes blockquote {
   position: relative;
-  z-index: 2;
-  max-width: 600px;             /* restrict width for readability */
-  margin: 0 auto;
-  font-size: 1.5rem;             /* adjust to Figma value */
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.5rem;
   font-style: italic;
-  line-height: 1.4;
+  z-index: 2;
 }
 
-.quotes blockquote p {
+/* Videos */
+.videos {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.video-list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.video img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.video h3 {
+  margin-top: 10px;
+}
+
+/* Membership */
+.membership {
+  background: url("../images/member-bg.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.membership button {
+  background: #ff5722;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.membership button:hover {
+  background: #e64a19;
+}
+
+/* FAQ */
+.faq {
+  background: #f7f7f7;
+  padding: 60px 20px;
+}
+
+.faq-item {
   margin-bottom: 20px;
 }
 
-.quotes cite {
-  display: block;
-  margin-top: 15px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--secondary-color); /* use your CSS variable if defined */
+/* Footer */
+.site-footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
 }
 
-  <footer>
-    <p>&copy; 2025 Klaus — CSS Advanced Project</p>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is CSS?</h3>
+      <p>CSS stands for Cascading Style Sheets. It defines how HTML elements are displayed.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2025 ALX CSS Advanced Project. Built by Ian.</p>
   </footer>
+
 </body>
 </html>
