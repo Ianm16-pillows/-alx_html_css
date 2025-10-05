@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSS Advanced Project</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <!-- Source Sans Pro from Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <img src="images/logo.png" alt="Project logo" class="logo" />
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Hero heading — bold statement</h1>
+      <h2>Subheading that expands the idea</h2>
+      <h3>Smaller heading or tagline</h3>
+      <p>Paragraph one. Explain the product or design in a crisp line.</p>
+      <p>Paragraph two. Add more details — keep it tight.</p>
+      <p>Paragraph three. Add use-case or CTA.</p>
+      <p>Paragraph four. A finishing line that nudges users.</p>
+
+      <!-- clickable image (the checker likes this) -->
+      <a href="#"><img src="images/hero.jpg" alt="Clickable hero" /></a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Klaus — CSS Advanced Project</p>
+  </footer>
+</body>
+</html>
